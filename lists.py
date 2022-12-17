@@ -40,7 +40,7 @@ def long_words(words):
     """
     longer_than_4 = []
     for word in words:
-        if len(word) >= 4:
+        if len(word) > 4:
             longer_than_4.append(word)
     return longer_than_4
 
@@ -352,8 +352,6 @@ def reverse_list_in_place(items):
         last_item = items.pop()
         # then inserts the last_item at index i
         items.insert(i, last_item)
-
-    return items
 
 
 def duplicates(items):
