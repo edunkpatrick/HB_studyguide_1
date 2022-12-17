@@ -237,7 +237,12 @@ def join_strings(words):
         ''
     """
 
-    return "Not the right thing"
+    joined_strings = ''
+
+    for word in words:
+        joined_strings += word
+
+    return joined_strings
 
 
 def average(numbers):
