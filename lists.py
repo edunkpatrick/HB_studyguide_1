@@ -323,7 +323,9 @@ def reverse_list(items):
         ['apple', 'berry', 'cherry']
     """
 
-    return []
+    reversed_items = items[-1::-1]
+
+    return reversed_items
 
 
 def reverse_list_in_place(items):
