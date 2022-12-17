@@ -141,7 +141,7 @@ def halvesies(numbers):
         # make an empty list for divided numbers
     divided_by_2 = []
 
-# iterate through the input list
+    # iterate through the input list
     for number in numbers:
         # convert input number to float
         number = float(number)
@@ -161,8 +161,12 @@ def word_lengths(words):
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
     """
-
-    return []
+    length_of_words = []
+    
+    for word in words:
+        length_of_words.append(len(word))
+    
+    return length_of_words
 
 
 def sum_numbers(numbers):
