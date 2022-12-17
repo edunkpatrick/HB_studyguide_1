@@ -162,7 +162,7 @@ def word_lengths(words):
         [5, 3, 5, 4]
     """
     length_of_words = []
-    
+
     for word in words:
         length_of_words.append(len(word))
     
@@ -185,7 +185,12 @@ def sum_numbers(numbers):
         0
     """
 
-    return None
+    sum_of_nums = 0
+
+    for number in numbers:
+        sum_of_nums += number
+
+    return sum_of_nums
 
 
 def mult_numbers(numbers):
