@@ -347,8 +347,13 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
+    # loop that pops off last item at index i
+    for i in range(len(items)):
+        last_item = items.pop()
+        # then inserts the last_item at index i
+        items.insert(i, last_item)
 
-    return []
+    return items
 
 
 def duplicates(items):
