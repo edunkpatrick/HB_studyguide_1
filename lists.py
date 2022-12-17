@@ -390,11 +390,12 @@ def duplicates(items):
             # append item to unique list if its not in list already
             unique_list.append(item)
 
-            # if item in unique list, check if its in the duplicate list
+        # if item in unique list, check if its in the duplicate list
         elif item not in duplicate_list:
-            # append item to duplicate list
+            # append item to duplicate list if not in list already
             duplicate_list.append(item)
-        
+
+    # return sorted duplicate_list    
     return sorted(duplicate_list)
 
 
@@ -423,7 +424,24 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
-    return []
+    # make a list for indices values to add to
+    indices = []
+
+    # iterate over each word in list
+    for word in words:
+        # iterate of each letter in word
+        for i in word:
+            # if the letter == argument letter, find index of letter
+            if i == letter:
+                letterindex = word.index(letter)
+                # append index of letter to list of indices
+                indices.append(letterindex)
+        # if the letter is not in the word
+        if letter not in word:
+            # return "None"
+            indices.append(None)
+ 
+    return indices
 
 
 #####################################################################
