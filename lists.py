@@ -66,7 +66,6 @@ def n_long_words(words, n):
 
     return longer_than_n
 
-
 def smallest_int(numbers):
     """Find the smallest integer in a list of integers and return it.
     **DO NOT USE** the built-in function `min()`!
@@ -95,6 +94,7 @@ def smallest_int(numbers):
     # return None if list is empty
     return
 
+
 def largest_int(numbers):
     """Find the largest integer in a list of integers and return it.
     **DO NOT USE** the built-in function `max()`!
@@ -111,8 +111,16 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
+    # make list of sorted numbers
+    sort_numbers = sorted(numbers)
+    
+    # check if list contains values
+    if len(sort_numbers) > 0:
+        # return largest number if list contains values
+        return sort_numbers[-1]
 
-    return 0
+    # return None if list is empty
+    return
 
 
 def halvesies(numbers):
@@ -130,7 +138,19 @@ def halvesies(numbers):
         [0.5, 2.5]
     """
 
-    return []
+        # make an empty list for divided numbers
+    divided_by_2 = []
+
+# iterate through the input list
+    for number in numbers:
+        # convert input number to float
+        number = float(number)
+        # divide float by 2
+        divided = number / 2
+        # append divided_by_2 list
+        divided_by_2.append(divided)
+
+    return divided_by_2
 
 
 def word_lengths(words):
