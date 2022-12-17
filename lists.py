@@ -379,7 +379,23 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    return []
+    # create list of unique items
+    unique_list = []
+    duplicate_list = []
+
+    # for loop to iterate through each item in list
+    for item in items:
+        # check if the item is in unique list
+        if item not in unique_list:
+            # append item to unique list if its not in list already
+            unique_list.append(item)
+
+            # if item in unique list, check if its in the duplicate list
+        elif item not in duplicate_list:
+            # append item to duplicate list
+            duplicate_list.append(item)
+        
+    return sorted(duplicate_list)
 
 
 def find_letter_indices(words, letter):
