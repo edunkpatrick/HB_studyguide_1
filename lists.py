@@ -63,10 +63,8 @@ def n_long_words(words, n):
     for word in words:
         if len(word) > n:
             longer_than_n.append(word)
-            
-    return longer_than_n
 
-    return ['the wrong thing']
+    return longer_than_n
 
 
 def smallest_int(numbers):
@@ -85,9 +83,17 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
+    
+    # make list of sorted numbers
+    sort_numbers = sorted(numbers)
+    
+    # check if list contains values
+    if len(sort_numbers) > 0:
+        # return smallest number if list contains values
+        return sort_numbers[0]
 
-    return 100
-
+    # return None if list is empty
+    return
 
 def largest_int(numbers):
     """Find the largest integer in a list of integers and return it.
