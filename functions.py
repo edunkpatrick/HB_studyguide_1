@@ -5,6 +5,7 @@ Please read the the instructions first (separate file). Your solutions should
 go below this docstring.
 
 PART ONE:
+# PART ONE
 
     >>> hello_world()
     Hello World
